@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Baekjoon Example Copier",
+    "version": "1.0",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "https://www.acmicpc.net/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.acmicpc.net/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
